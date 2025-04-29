@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../../../Styles/userAttendanceStyle.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sbsk_v2_slavemodule_card_camera.userAttendanceController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Top Title Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="title-bar">
+            <Label fx:id="titleLabel" styleClass="title-label" text="Shramik Bhugtaan Seva Kendra (SBSK)" />
+            <Region HBox.hgrow="ALWAYS" />
+
+        </HBox>
+    </top>
+
+    <center>
+
+        <StackPane>
+            <VBox alignment="TOP_CENTER" spacing="20" styleClass="hero-container">
+
+                <HBox alignment="CENTER" spacing="20" styleClass="image-row">
+                    <ImageView fx:id="logoImageView1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                        <Image url="@../../../images/logo1.png" />
+                    </ImageView>
+                    <ImageView fx:id="logoImageView2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                        <Image url="@../../../images/logo2.png" />
+                    </ImageView>
+                    <ImageView fx:id="logoImageView3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                        <Image url="@../../../images/logo3.png" />
+                    </ImageView>
+                    <ImageView fx:id="logoImageView4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                        <Image url="@../../../images/logo4.png" />
+                    </ImageView>
+                </HBox>
+                <HBox prefHeight="405.0" prefWidth="1160.0">
+                    <VBox prefHeight="405.0" prefWidth="580.0">
+                        <Label text="Instructions for Marking Attendance">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                        </Label>
+                        <Label text="User Verification Process">
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Step 1: User Card Verification Process">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="A. Click on the Given Button here">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="80.0" right="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <Label layoutX="90.0" layoutY="140.0" text="B. Place You Card on the Card Reader">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="80.0" />
+                     </VBox.margin>
+                  </Label>
+
+                        <Label text="Step 2: User Card Verification Process">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="A. Place Your Face in-font of Camera">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="80.0" right="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="Step 3: User Attendance Data Save and Transmission Process">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="A. Wait for conformation of your attendance">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="80.0" right="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <Button mnemonicParsing="false" text="Start User Verification Process " onAction="#handleCardVerificationProcess">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+
+
+                    </VBox>
+
+
+                    <VBox prefHeight="405.0" prefWidth="580.0">
+                        <ImageView fx:id="fieldImg" fitHeight="405.0" fitWidth="405.0" pickOnBounds="true"
+                                   preserveRatio="true" styleClass="image-view">
+                            <Image url="@../../../images/field_image.png"/>
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="50.0" right="20.0" top="10.0"/>
+                            </VBox.margin>
+                        </ImageView>
+                    </VBox>
+                </HBox>
+
+
+
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Bottom Footer Bar -->
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer-bar">
+            <Label fx:id="footerLabel" styleClass="footer-label" text="© 2023 SBSK Wage Distribution System. All Rights Reserved." />
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../Styles/appStyle.css"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.sbsk_v2_slavemodule_card_camera.AppController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Top Title Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="title-bar">
+            <Label fx:id="titleLabel" text="Shramik Bhugtaan Seva Kendra (SBSK)" styleClass="title-label" />
+            <Region HBox.hgrow="ALWAYS" />
+<!--                        <ComboBox fx:id="languageComboBox" styleClass="language-combo" promptText="Select Language" />-->
+        </HBox>
+    </top>
+
+    <!-- Center Content - Hero Section -->
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER" spacing="20" styleClass="hero-container">
+
+                <HBox alignment="CENTER" spacing="20" styleClass="image-row">
+                    <ImageView fx:id="logoImageView1" styleClass="image-view" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/logo1.png"/>
+                    </ImageView>
+                    <ImageView fx:id="logoImageView2" styleClass="image-view" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/logo2.png"/>
+                    </ImageView>
+                    <ImageView fx:id="logoImageView3" styleClass="image-view" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/logo3.png"/>
+                    </ImageView>
+                    <ImageView fx:id="logoImageView4" styleClass="image-view" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/logo4.png"/>
+                    </ImageView>
+                </HBox>
+
+                <Label fx:id="welcomeLabel" styleClass="welcome-label" text="Welcome to Shramik Bhugtaan Seva Kendra (SBSK)" />
+                <Label fx:id="descriptionLabel" styleClass="description-label" text="'Shramik Bhugtaan Seva Kendra (SBSK)' for timely payment to the beneficiaries residing in far-flung areas under various government schemes." />
+
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="toHandleUserAttendanceButton" text="To Mark Attendance" onAction="#handleUserAttendance" />
+                    <Button fx:id="moneyRequestButton" text="To Request Money"  />
+                    <Button fx:id="subSlaveButton" text="To Connect Sub-Slave"  />
+                </HBox>
+
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Bottom Footer Bar -->
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer-bar">
+            <Label fx:id="footerLabel" styleClass="footer-label" text="© 2023 SBSK Wage Distribution System. All Rights Reserved." />
+        </HBox>
+    </bottom>
+
+</BorderPane>
