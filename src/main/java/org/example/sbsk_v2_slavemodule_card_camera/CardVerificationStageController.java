@@ -37,7 +37,11 @@ public class CardVerificationStageController {
 
     private static final Logger logger = LoggerFactory.getLogger(CardVerificationStageController.class);
     private static final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\Verification\\userVerification.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\Verification\\userVerification.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification2.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification3.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification4withlog.py";
+    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification4withlogMordernDashboard.py";
 
     @FXML private Label statusLabel;
     @FXML private Label idNumberLabel;
