@@ -41,7 +41,7 @@ public class userAttendanceController {
             Parent root = cardVerificationLoader.load();
 
             cardVerificationStage = new Stage();
-            cardVerificationStage.setTitle("Card Verification Window");
+            cardVerificationStage.setTitle("Card Verification Window (TO MARK ATTENDANCE PROCESS)");
             cardVerificationStage.setScene(new Scene(root));
             cardVerificationStage.initModality(Modality.APPLICATION_MODAL);
             cardVerificationStage.setAlwaysOnTop(true);
