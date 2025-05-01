@@ -83,7 +83,7 @@
                      </VBox.margin>
                   </Label>
 
-                        <Label text="Step 2: User Card Verification Process">
+                        <Label text="Step 2: User Face Verification Process">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
                             </VBox.margin>
