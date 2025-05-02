@@ -5,10 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.example.sbsk_v2_slavemodule_card_camera.scterminal.CardInteraction;
 import org.example.sbsk_v2_slavemodule_card_camera.scterminal.Scterminal;
 import org.example.sbsk_v2_slavemodule_card_camera.utils.JsonUtils;
@@ -41,7 +43,9 @@ public class CardVerificationStageController {
 //    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification2.py";
 //    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification3.py";
 //    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification4withlog.py";
-    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification4withlogMordernDashboard.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\PythonFaceVerificationRegistrationModule\\UserRegistrationAndVerification\\userVerificationAndSavingAttendanceDataLoRaTransmite\\RegistrationAndVerification\\userVerification4withlogMordernDashboard.py";
+//    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\SBSK_V2.O Complete System\\SBSKSlaveSideGUI_2_O_HandleOnlyAttendanceData\\RegistrationAndVerifcation_ToReqestMoney_Button\\userFaceVerificationAndTransmits_AttendanceDataOneTimeOnly.py";
+    private static final String PYTHON_SCRIPT_PATH = "C:\\Users\\acer\\Documents\\SBSK_V2.O Complete System\\SBSKSlaveSideGUI_2_O_HandleOnlyAttendanceData\\RegistrationAndVerification_ToMarkAttendance_Button\\userFaceVerificationAndTransmits_AttendanceDataNTimes.py";
 
     @FXML private Label statusLabel;
     @FXML private Label idNumberLabel;
@@ -106,6 +110,7 @@ public class CardVerificationStageController {
                         boolean isValid = JsonUtils.isValidUser(idNumber, name);
                         if (isValid) {
                             showValidationSuccessPopup();
+
                             updateStatus("Valid user verified");
                         } else {
                             showAlert(Alert.AlertType.WARNING, "Invalid User",
