@@ -31,6 +31,8 @@ public class AppController {
     public Label descriptionLabel;
     public Label footerLabel;
     public Button toHandleUserAttendanceButton;
+    public Button toHandleMoneyReceiptTokenRequestButton;
+
 
 
 
@@ -53,7 +55,7 @@ public class AppController {
             Parent root = attendanceLoader.load();
 
             userAttendanceStage = new Stage();
-            userAttendanceStage.setTitle("Attendance Window");
+            userAttendanceStage.setTitle("ATTENDANCE WINDOW  (TO MARK ATTENDANCE )");
             userAttendanceStage.setScene(new Scene(root));
             userAttendanceStage.initModality(Modality.APPLICATION_MODAL);
             userAttendanceStage.setAlwaysOnTop(true);
@@ -63,5 +65,34 @@ public class AppController {
             e.printStackTrace();
         }
 
+    }
+
+
+    private Stage userRequestMoneyReceiptTokenStage;
+
+
+    public void handleMoneyReceiptTokenRequest(ActionEvent actionEvent) {
+        System.out.println("User Request Money Receipt Token");
+
+        if (userRequestMoneyReceiptTokenStage != null && userRequestMoneyReceiptTokenStage.isShowing()){
+            userRequestMoneyReceiptTokenStage.toFront();
+            userRequestMoneyReceiptTokenStage.requestFocus();
+            return;
+        }
+
+        try {
+            FXMLLoader requestMoneyReceiptTokenLoader = new FXMLLoader(getClass().getResource("userRequestMoneyReceiptTokenStageController-view.fxml"));
+            Parent root = requestMoneyReceiptTokenLoader.load();
+
+            userRequestMoneyReceiptTokenStage = new Stage();
+            userRequestMoneyReceiptTokenStage.setTitle("CARD VERIFICATION WINDOW (TO Request Money Receipt Token)");
+            userRequestMoneyReceiptTokenStage.setScene(new Scene(root));
+            userRequestMoneyReceiptTokenStage.initModality(Modality.APPLICATION_MODAL);
+            userRequestMoneyReceiptTokenStage.setAlwaysOnTop(true);
+            userRequestMoneyReceiptTokenStage.setOnHidden(event -> userRequestMoneyReceiptTokenStage = null);
+            userRequestMoneyReceiptTokenStage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }
