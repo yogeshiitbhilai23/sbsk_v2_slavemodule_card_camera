@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.sbsk_v2_slavemodule_card_camera.CardVerificationForRequestAmountStageController"
+            stylesheets="@../../../Styles/cardVerificationStyle.css"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!--    &lt;!&ndash; Top Title Bar &ndash;&gt;-->
+    <!--    <top>-->
+    <!--        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50;">-->
+    <!--            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Card Verification" />-->
+    <!--            <Region HBox.hgrow="ALWAYS" />-->
+    <!--            <Button onAction="#handleClose" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="X" />-->
+    <!--        </HBox>-->
+    <!--    </top>-->
+
+
+
+    <!-- Top Title Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="title-bar">
+            <Label fx:id="titleLabel" styleClass="title-label" text="Shramik Bhugtaan Seva Kendra (SBSK)" />
+            <Region HBox.hgrow="ALWAYS" />
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+            <HBox alignment="CENTER" spacing="20" styleClass="image-row">
+                <ImageView fx:id="logoImageView1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                    <Image url="@../../../images/logo1.png" />
+                </ImageView>
+                <ImageView fx:id="logoImageView2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                    <Image url="@../../../images/logo2.png" />
+                </ImageView>
+                <ImageView fx:id="logoImageView3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                    <Image url="@../../../images/logo3.png" />
+                </ImageView>
+                <ImageView fx:id="logoImageView4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                    <Image url="@../../../images/logo4.png" />
+                </ImageView>
+            </HBox>
+            <!-- Card Reader Section -->
+            <VBox alignment="CENTER" spacing="15" style="-fx-border-color: #bdc3c7; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-padding: 20;">
+
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Smart Card Reader" />
+                <Button onAction="#handleReadCard" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Read Card" />
+                <Label fx:id="statusLabel" style="-fx-font-size: 14px;" text="Please insert your card and click 'Read Card'" />
+            </VBox>
+
+            <!-- Card Data Display -->
+            <VBox alignment="CENTER_LEFT" spacing="10" style="-fx-border-color: #bdc3c7; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-padding: 20; -fx-pref-width: 600;">
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Card Information" />
+                <GridPane hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" minWidth="150.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                    </rowConstraints>
+
+                    <Label text="ID Number:" style="-fx-font-weight: bold;" />
+                    <Label fx:id="idNumberLabel" text="Not Available" GridPane.columnIndex="1" />
+
+                    <Label text="Full Name:" style="-fx-font-weight: bold;" GridPane.rowIndex="1" />
+                    <Label fx:id="nameLabel" text="Not Available" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Valid Until:" style="-fx-font-weight: bold;" GridPane.rowIndex="2" />
+                    <Label fx:id="validUntilLabel" text="Not Available" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                </GridPane>
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #ecf0f1; -fx-padding: 10;">
+            <Label fx:id="footerLabel" style="-fx-text-fill: #7f8c8d;" text="© 2023 SBSK - Card Verification Module" />
+        </HBox>
+    </bottom>
+</BorderPane>
