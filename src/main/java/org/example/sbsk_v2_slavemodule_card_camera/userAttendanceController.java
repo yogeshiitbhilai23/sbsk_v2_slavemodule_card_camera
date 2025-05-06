@@ -37,7 +37,7 @@ public class userAttendanceController {
         }
 
         try {
-            FXMLLoader cardVerificationLoader = new FXMLLoader(getClass().getResource("cardVerificationStage-view.fxml"));
+            FXMLLoader cardVerificationLoader = new FXMLLoader(getClass().getResource("cardVerificationStageForAttendanceMarking-view.fxml"));
             Parent root = cardVerificationLoader.load();
 
             cardVerificationStage = new Stage();
