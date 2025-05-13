@@ -53,7 +53,7 @@
             <!-- Card Reader Section -->
             <VBox alignment="CENTER" spacing="15" style="-fx-border-color: #bdc3c7; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-padding: 20;">
 
-                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Smart Card Reader" />
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Smart Card Reader for Marking Attendance" />
                 <Button onAction="#handleReadCard" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Read Card" />
                 <Label fx:id="statusLabel" style="-fx-font-size: 14px;" text="Please insert your card and click 'Read Card'" />
             </VBox>
